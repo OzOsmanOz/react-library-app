@@ -2,7 +2,7 @@ import React from "react";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <h4>Library Project</h4>
     </div>
   );
