@@ -15,60 +15,25 @@
       "categoryId": "1"
     },
     {
-      "id": "1678974629085",
-      "name": "asdfasdfasdf",
-      "author": "asdf",
+      "id": "1678979885486",
+      "name": "Semerkant",
+      "author": "Amin Maalouf",
       "categoryId": "1",
-      "isbn": "asdf"
+      "isbn": "11113"
     },
     {
-      "id": "1678976139198",
-      "name": "zxcvzxcvxzcv",
-      "author": "zxcv",
-      "categoryId": "1",
-      "isbn": "zxcv"
-    },
-    {
-      "id": "1678976488674",
-      "name": "qwerqewrqwer",
-      "author": "qwerqwer",
+      "id": "1678979943914",
+      "name": "Denemeler",
+      "author": "Montaigne",
       "categoryId": "3",
-      "isbn": "qwer"
+      "isbn": "11114"
     },
     {
-      "id": "1678976645818",
+      "id": "1678999672448",
       "name": "asdfasdf",
-      "author": "asda",
-      "categoryId": "1",
-      "isbn": "sd"
-    },
-    {
-      "id": "1678976720613",
-      "name": "fghj",
-      "author": "fg",
-      "categoryId": "3",
-      "isbn": "g"
-    },
-    {
-      "id": "1678976924800",
-      "name": "yuıoyuıoyıuo",
-      "author": "yıu",
+      "author": "asdf",
       "categoryId": "2",
-      "isbn": "yuıo"
-    },
-    {
-      "id": "1678977069750",
-      "name": "cvbvcvbcvbcv",
-      "author": "bcvbc",
-      "categoryId": "2",
-      "isbn": "vbcvb"
-    },
-    {
-      "id": "1678977090941",
-      "name": "jklşjklşjklş",
-      "author": "jklş",
-      "categoryId": "1",
-      "isbn": "jklş"
+      "isbn": "1234"
     }
   ],
   "categories": [
