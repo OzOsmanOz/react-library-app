@@ -1,25 +1,88 @@
 {
-    "books" : [
-        {
-            "id" : 1,
-            "name" : "Yaban",
-            "author": "Yakup Kadri Karaosmanoğlu",
-            "isbn" : "11111",
-            "categoryId" : 1
-        }
-    ],
-    "categories" : [
-        {
-            "id" : 1,
-            "name" : "Roman"
-        },
-        {
-            "id" : 2,
-            "name" : "Hikaye"
-        },
-        {
-            "id" : 3,
-            "name" : "Deneme"
-        }
-    ]
+  "books": [
+    {
+      "id": "1",
+      "name": "Bab-ı Esrar",
+      "author": "Ahmet Ümit",
+      "isbn": "11111",
+      "categoryId": "2"
+    },
+    {
+      "id": "2",
+      "name": "Aşk",
+      "author": "Elif Şafak",
+      "isbn": "11112",
+      "categoryId": "1"
+    },
+    {
+      "id": "1678974629085",
+      "name": "asdfasdfasdf",
+      "author": "asdf",
+      "categoryId": "1",
+      "isbn": "asdf"
+    },
+    {
+      "id": "1678976139198",
+      "name": "zxcvzxcvxzcv",
+      "author": "zxcv",
+      "categoryId": "1",
+      "isbn": "zxcv"
+    },
+    {
+      "id": "1678976488674",
+      "name": "qwerqewrqwer",
+      "author": "qwerqwer",
+      "categoryId": "3",
+      "isbn": "qwer"
+    },
+    {
+      "id": "1678976645818",
+      "name": "asdfasdf",
+      "author": "asda",
+      "categoryId": "1",
+      "isbn": "sd"
+    },
+    {
+      "id": "1678976720613",
+      "name": "fghj",
+      "author": "fg",
+      "categoryId": "3",
+      "isbn": "g"
+    },
+    {
+      "id": "1678976924800",
+      "name": "yuıoyuıoyıuo",
+      "author": "yıu",
+      "categoryId": "2",
+      "isbn": "yuıo"
+    },
+    {
+      "id": "1678977069750",
+      "name": "cvbvcvbcvbcv",
+      "author": "bcvbc",
+      "categoryId": "2",
+      "isbn": "vbcvb"
+    },
+    {
+      "id": "1678977090941",
+      "name": "jklşjklşjklş",
+      "author": "jklş",
+      "categoryId": "1",
+      "isbn": "jklş"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Roman"
+    },
+    {
+      "id": "2",
+      "name": "Hikaye"
+    },
+    {
+      "id": "3",
+      "name": "Deneme"
+    }
+  ]
 }

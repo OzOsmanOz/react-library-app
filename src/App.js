@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import ListBooks from "./components/ListBooks";
-import AddBook from "./components/AddBook";
+import AddBook from "./pages/AddBook";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ListBooks />} />
+        <Route path="/" element={<Home />} />
         <Route path="/add-book" element={<AddBook />} />
       </Routes>
     </BrowserRouter>

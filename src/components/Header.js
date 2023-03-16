@@ -6,9 +6,9 @@ const Header = () => {
     <div>
       <nav className="navbar navbar-expand-md bg-primary">
         <div className="container ">
-          <a className="navbar-brand fw-semibold fs-5 text-white" href="#">
+          <Link to={"/"} className="navbar-brand fw-semibold fs-5 text-white">
             Library App
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"

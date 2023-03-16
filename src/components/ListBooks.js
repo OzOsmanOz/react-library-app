@@ -1,27 +1,33 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Header from "./Header";
 
-function ListBooks(props) {
+import Loading from "./Loading";
+
+const ListBooks = (props) => {
   const [books, setBooks] = useState(null);
-  console.log("books", books);
+  const [categories, setCategories] = useState(null);
 
   useEffect(() => {
     axios
       .get("http://localhost:3004/books")
       .then((res) => {
-        console.log("res", res.data);
         setBooks(res.data);
+
+        axios
+          .get("http://localhost:3004/categories")
+          .then((res) => {
+            setCategories(res.data);
+          })
+          .catch((err) => console.log("categories err", err));
       })
-      .catch((err) => console.log("Res Err", err));
+      .catch((err) => console.log("books err", err));
   }, []);
 
-  if (!books) return null;
+  if (!books || !categories) return <Loading />;
 
   return (
     <div>
-      <Header />
       <div className="container my-5">
         <div className="d-flex justify-content-end mb-4">
           <Link to={"/add-book"} className="btn btn-sm btn-success fw-semibold">
@@ -38,19 +44,30 @@ function ListBooks(props) {
             </tr>
           </thead>
           <tbody>
-            {books.map((book) => (
-              <tr>
-                <td>{book.name}</td>
-                <td className="text-center">{book.author}</td>
-                <td className="text-center">Kategori</td>
-                <td>{book.isbn}</td>
-              </tr>
-            ))}
+            {books.map((book) => {
+              const category = categories.find(
+                (cat) => cat.id === book.categoryId
+              );
+
+              return (
+                <tr key={book.id}>
+                  <td>{book.name}</td>
+                  <td className="text-center">{book.author}</td>
+                  <td className="text-center">{category.name}</td>
+                  <td>{book.isbn}</td>
+                  <div>
+                    <button className="btn btn-sm btn-danger py-0">
+                      Delete
+                    </button>
+                  </div>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
     </div>
   );
-}
+};
 
 export default ListBooks;
