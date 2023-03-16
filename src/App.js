@@ -1,10 +1,17 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import ListBooks from "./components/ListBooks";
+import AddBook from "./components/AddBook";
 
 function App() {
   return (
-    <div className="container">
-      <h4>Library Project</h4>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ListBooks />} />
+        <Route path="/add-book" element={<AddBook />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
