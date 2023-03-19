@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Loading from "./Loading";
+import Modal from "./Modal";
 
 const ListBooks = (props) => {
-  const navigate = useNavigate();
   const [books, setBooks] = useState(null);
   const [categories, setCategories] = useState(null);
   const [didUpdate, setDidUpdate] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [deletedBookId, setDeletedBookId] = useState("");
+  const [deletedBookName, setDeletedBookName] = useState();
 
   useEffect(() => {
     axios
@@ -26,11 +29,12 @@ const ListBooks = (props) => {
       .catch((err) => console.log("books err", err));
   }, [didUpdate]);
 
-  const handleDelete = (id) => {
+  const handleDelete = () => {
     axios
-      .delete(`http://localhost:3004/books/${id}`)
+      .delete(`http://localhost:3004/books/${deletedBookId}`)
       .then((res) => {
         setDidUpdate(!didUpdate);
+        setShowModal(false);
       })
       .catch((err) => console.log("delete err", err));
   };
@@ -74,7 +78,15 @@ const ListBooks = (props) => {
                   </td>
                   <td className="text-center">
                     <button
-                      onClick={() => handleDelete(book.id)}
+                      onClick={() => {
+                        setShowModal(true);
+                        setDeletedBookId(book.id);
+                        setDeletedBookName(book.name);
+                        // const deletedFindBook = books.find(
+                        //   (item) => item.id === book.id
+                        // );
+                        // setDeletedBookName(deletedFindBook);
+                      }}
                       className="btn btn-sm btn-danger py-0"
                     >
                       <i className="fa-solid fa-trash"></i>
@@ -91,6 +103,15 @@ const ListBooks = (props) => {
             })}
           </tbody>
         </table>
+        {showModal === true && (
+          <Modal
+            onCancel={() => setShowModal(false)}
+            onConfirm={handleDelete}
+            // handleDelete={()=> handleDelete(deletedBookId)}
+            title={deletedBookName}
+            explanation="Are you sure you want to delete the book?"
+          />
+        )}
       </div>
     </div>
   );
