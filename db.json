@@ -29,11 +29,11 @@
       "isbn": "11114"
     },
     {
-      "id": "1679262612553",
-      "name": "qwerqwerqwe",
+      "id": "1679298251569",
+      "name": " qwer qwer",
       "author": "qwer",
-      "categoryId": "1",
-      "isbn": "qwer"
+      "categoryId": "1679298217158",
+      "isbn": "1234"
     }
   ],
   "categories": [
@@ -48,6 +48,18 @@
     {
       "id": "3",
       "name": "Deneme"
+    },
+    {
+      "id": "1679294614244",
+      "name": "Şiir"
+    },
+    {
+      "id": "1679294622845",
+      "name": "Öykü"
+    },
+    {
+      "id": "1679298217158",
+      "name": "asdf qwer"
     }
   ]
 }

@@ -21,10 +21,18 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto mb-lg-0">
+            <ul className="navbar-nav ms-5 mb-lg-0">
               <li className="nav-item">
-                <Link to={"/"} className="nav-link active text-white">
-                  Home
+                <Link to={"/"} className="nav-link text-white fw-semibold">
+                  Books
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to={"/categories"}
+                  className="nav-link text-white ms-3 fw-semibold"
+                >
+                  Categories
                 </Link>
               </li>
             </ul>

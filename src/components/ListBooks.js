@@ -11,7 +11,7 @@ const ListBooks = (props) => {
   const [didUpdate, setDidUpdate] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [deletedBookId, setDeletedBookId] = useState("");
-  const [deletedBookName, setDeletedBookName] = useState();
+  const [deletedBookName, setDeletedBookName] = useState("");
 
   useEffect(() => {
     axios
